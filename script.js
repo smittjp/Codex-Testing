@@ -46,6 +46,8 @@ const stationDirections = {
 const lineSelect = document.getElementById('lineSelect');
 const stationSelect = document.getElementById('stationSelect');
 const directionsDiv = document.getElementById('directions');
+const beepSound = new Audio('FamilyMartChime.mp3');
+
 
 for (const line of Object.keys(railLines)) {
   const opt = document.createElement('option');
@@ -77,13 +79,11 @@ stationSelect.addEventListener('change', () => {
 
 function playSound() {
   try {
-    const ctx = new (window.AudioContext || window.webkitAudioContext)();
-    const oscillator = ctx.createOscillator();
-    oscillator.type = 'triangle';
-    oscillator.frequency.setValueAtTime(660, ctx.currentTime);
-    oscillator.connect(ctx.destination);
-    oscillator.start();
-    oscillator.stop(ctx.currentTime + 0.15);
+    beepSound.currentTime = 0;
+    const playPromise = beepSound.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(e => console.error(e));
+    }
   } catch (e) {
     console.error(e);
   }

@@ -61,6 +61,13 @@ select {
   animation: bounce 2s infinite ease-in-out, drift 10s infinite linear;
 }
 
+footer {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #00a0e9;
+}
+
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-30px); }
