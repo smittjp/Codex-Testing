@@ -1,11 +1,11 @@
-# Japanese Rail Lines Browser
+# Famichiki Finder
 
-This project provides a static web page for exploring the major rail lines across Japan. There is no build process or npm setup required; simply open `index.html` in your browser to view the site.
+This lighthearted page helps you locate the nearest Family Mart from a selected station. Choose a rail line, pick a station and enjoy the bouncing famichiki while reading the directions.
 
-For convenience, you can also serve the page locally with a simple HTTP server, such as:
+No build tools are required. Simply open `index.html` in your browser. To serve the page locally you can run:
 
 ```bash
 python3 -m http.server
 ```
 
-Then navigate to `http://localhost:8000` to browse the site.
+Then visit `http://localhost:8000`.
