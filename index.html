@@ -3,21 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Japan Rail Navigator</title>
+  <title>Famichiki Finder</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>Japan Rail Navigator</h1>
-    <p>Select a rail line to view its major stations.</p>
+    <h1>Famichiki Finder</h1>
+    <p>Select your rail line and station to locate the nearest Family Mart.</p>
   </header>
   <main>
     <label for="lineSelect">Rail Line:</label>
     <select id="lineSelect">
       <option value="">--Choose a line--</option>
     </select>
-    <ul id="stationsList"></ul>
+    <label for="stationSelect">Station:</label>
+    <select id="stationSelect" disabled>
+      <option value="">--Choose a station--</option>
+    </select>
+    <div id="directions"></div>
   </main>
+  <div class="famichiki-container">
+    <span class="famichiki">🍗</span>
+    <span class="famichiki">🍗</span>
+    <span class="famichiki">🍗</span>
+    <span class="famichiki">🍗</span>
+    <span class="famichiki">🍗</span>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
